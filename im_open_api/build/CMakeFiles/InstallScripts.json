@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/root/project/ROCIM_CLOUD/im_open_api/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
