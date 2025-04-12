@@ -4,18 +4,16 @@
 
 using namespace std;
 
-std::expected<int, std::string> open_api_test(const std::string &path) {
+std::expected<int, std::string> open_api(const std::string &path) {
     if (path == "valid_path") {
-        return 42;
+        return 42; // Simulated file descriptor
     } else {
         return std::unexpected("Invalid path");
     }
 }
 
-int Gcd(int a, int b) { return a + b; }
-
 int main() {
-    auto res = open_api_test("valid_path_");
+    auto res = open_api("valid_path_");
 
     return 0;
 }
