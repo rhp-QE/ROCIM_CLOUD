@@ -9,8 +9,10 @@
 #define ROC_BASE_NET_WSSERVER_H
 
 #include "base/noncopyable.h"
+#include <boost/asio/awaitable.hpp>
 #include <boost/asio/io_context.hpp>
 #include <boost/beast/core/flat_buffer.hpp>
+#include <expected>
 #include <memory>
 #include <string>
 
@@ -20,7 +22,7 @@ namespace roc::base::net {
 class WSConnection;
 // -------------------Declare (end)--------------------
 
-// -------------------callback_type (end)--------------------
+// -------------------callback_type (begin)--------------------
 using OnNewConnectionCallBackT =
     std::function<void(std::shared_ptr<WSConnection> con)>;
 
@@ -48,8 +50,11 @@ class WSServer : public noncopyable,
     std::shared_ptr<WSServer>
     register_on_receive_message_callback(OnReceiveMessgaeCallBackT callback);
 
+    // 启动
+    boost::asio::awaitable<std::expected<bool, std::string>> run();
+
   private:
-    WSServerConfig config_;
+    const WSServerConfig config_;
     const boost::asio::io_context &io_context_;
     OnNewConnectionCallBackT new_con_callback_;
     OnReceiveMessgaeCallBackT receive_message_callback_;
