@@ -51,6 +51,22 @@ boost::asio::awaitable<std::shared_ptr<WSConnection>> WSServer::wait_for_connect
     using namespace boost::beast;
 
     auto ws_stream = websocket::stream<tcp_stream>(co_await acceptor.async_accept());
+    // Set suggested timeout settings for the websocket
+    ws_stream.set_option(websocket::stream_base::timeout::suggested(role_type::server));
+
+    // Set a decorator to change the Server of the handshake
+    ws_stream.set_option(websocket::stream_base::decorator(
+        [](websocket::response_type& res)
+        {
+            res.set(
+                http::field::server,
+                std::string(BOOST_BEAST_VERSION_STRING) +
+                    " websocket-server-coro");
+        }));
+
+    // Accept the websocket handshake
+    co_await ws_stream.async_accept();
+
     auto wsconn = std::make_shared<WSConnection>(std::move(ws_stream));
     connections_.push_back(wsconn);
     util::SAFE_INVOKE(new_con_callback_, wsconn);
@@ -61,8 +77,7 @@ boost::asio::awaitable<std::shared_ptr<WSConnection>> WSServer::wait_for_connect
 // 启动
 boost::asio::awaitable<void> WSServer::run() {
     auto ex = co_await boost::asio::this_coro::executor;
-    co_await boost::asio::post(
-        boost::asio::bind_executor(io_context_, boost::asio::use_awaitable));
+    co_await boost::asio::post(boost::asio::bind_executor(io_context_, boost::asio::use_awaitable));
 
     auto address = boost::beast::net::ip::make_address(config_.host);
     auto port = static_cast<unsigned short>(std::stoi(config_.port));

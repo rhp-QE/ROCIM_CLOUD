@@ -25,7 +25,7 @@ class WSConnection : public roc::base::noncopyable,
         boost::beast::websocket::stream<boost::asio::ip::tcp::socket>;
 
   public:
-    explicit WSConnection(const boost::asio::io_context &io_context,
+    explicit WSConnection(boost::asio::io_context &io_context,
                           stream_type stream);
 
     boost::asio::awaitable<boost::beast::flat_buffer> read();
@@ -33,7 +33,7 @@ class WSConnection : public roc::base::noncopyable,
 
   private:
     stream_type ws_stream_; // WebSocket流
-    const boost::asio::io_context &io_context_;
+    boost::asio::io_context &io_context_;
 };
 
 } // namespace roc::base::net
