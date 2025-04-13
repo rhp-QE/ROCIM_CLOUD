@@ -9,8 +9,10 @@
 #define ROC_BASE_NET_WSSERVER_H
 
 #include "base/noncopyable.h"
+#include <boost/asio/ip/tcp.hpp>
 #include <boost/asio/awaitable.hpp>
 #include <boost/asio/io_context.hpp>
+#include <boost/asio/ip/address.hpp>
 #include <boost/beast/core/flat_buffer.hpp>
 #include <expected>
 #include <memory>
@@ -40,7 +42,7 @@ class WSServer : public noncopyable,
   public:
     // 构造函数
     explicit WSServer(WSServerConfig config,
-                      const boost::asio::io_context &io_context);
+                      boost::asio::io_context &io_context);
 
     // 注册新连接回调
     std::shared_ptr<WSServer>
@@ -51,14 +53,21 @@ class WSServer : public noncopyable,
     register_on_receive_message_callback(OnReceiveMessgaeCallBackT callback);
 
     // 启动
-    boost::asio::awaitable<std::expected<bool, std::string>> run();
+    boost::asio::awaitable<void> run();
 
   private:
     const WSServerConfig config_;
-    const boost::asio::io_context &io_context_;
+    boost::asio::io_context &io_context_;
     OnNewConnectionCallBackT new_con_callback_;
     OnReceiveMessgaeCallBackT receive_message_callback_;
     std::vector<std::shared_ptr<WSConnection>> connections_;
+
+    // 持续读取数据
+    boost::asio::awaitable<void> do_read_continue(std::shared_ptr<WSConnection> conn);
+
+    // 等待连接
+    boost::asio::awaitable<std::shared_ptr<WSConnection>> wait_for_connection(boost::asio::ip::tcp::acceptor& acceptor);
+
 };
 
 } // namespace roc::base::net

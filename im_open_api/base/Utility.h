@@ -10,6 +10,7 @@
 
 #include "base/noncopyable.h"
 #include <concepts>
+#include <utility>
 namespace roc::base::util {
 
 template <typename F>
@@ -18,14 +19,20 @@ class defer : public roc::base::noncopyable {
   public:
     explicit defer(const F &func) : func_(func) {}
     ~defer() {
-        if (func_) {
-            func_();
-        }
+        if (func_) { func_(); }
     }
 
   private:
     F func_;
 };
+
+template<typename F, typename... Args>
+    requires std::invocable<F, Args...>
+void SAFE_INVOKE(const F &func, Args &&...args) {
+    if (func) {
+        func(std::forward<Args>(args)...);
+    }
+}
 
 } // namespace roc::base::util
 
