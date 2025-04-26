@@ -503,6 +503,78 @@ ContinuousSubmit/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ContinuousSubmit.dir/build.make CMakeFiles/ContinuousSubmit.dir/build
 .PHONY : ContinuousSubmit/fast
 
+base/Utility.o: base/Utility.cc.o
+.PHONY : base/Utility.o
+
+# target to build an object file
+base/Utility.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/base/Utility.cc.o
+.PHONY : base/Utility.cc.o
+
+base/Utility.i: base/Utility.cc.i
+.PHONY : base/Utility.i
+
+# target to preprocess a source file
+base/Utility.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/base/Utility.cc.i
+.PHONY : base/Utility.cc.i
+
+base/Utility.s: base/Utility.cc.s
+.PHONY : base/Utility.s
+
+# target to generate assembly for a file
+base/Utility.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/base/Utility.cc.s
+.PHONY : base/Utility.cc.s
+
+base/net/ws/WSConnection.o: base/net/ws/WSConnection.cc.o
+.PHONY : base/net/ws/WSConnection.o
+
+# target to build an object file
+base/net/ws/WSConnection.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/base/net/ws/WSConnection.cc.o
+.PHONY : base/net/ws/WSConnection.cc.o
+
+base/net/ws/WSConnection.i: base/net/ws/WSConnection.cc.i
+.PHONY : base/net/ws/WSConnection.i
+
+# target to preprocess a source file
+base/net/ws/WSConnection.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/base/net/ws/WSConnection.cc.i
+.PHONY : base/net/ws/WSConnection.cc.i
+
+base/net/ws/WSConnection.s: base/net/ws/WSConnection.cc.s
+.PHONY : base/net/ws/WSConnection.s
+
+# target to generate assembly for a file
+base/net/ws/WSConnection.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/base/net/ws/WSConnection.cc.s
+.PHONY : base/net/ws/WSConnection.cc.s
+
+base/net/ws/WSServer.o: base/net/ws/WSServer.cc.o
+.PHONY : base/net/ws/WSServer.o
+
+# target to build an object file
+base/net/ws/WSServer.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/base/net/ws/WSServer.cc.o
+.PHONY : base/net/ws/WSServer.cc.o
+
+base/net/ws/WSServer.i: base/net/ws/WSServer.cc.i
+.PHONY : base/net/ws/WSServer.i
+
+# target to preprocess a source file
+base/net/ws/WSServer.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/base/net/ws/WSServer.cc.i
+.PHONY : base/net/ws/WSServer.cc.i
+
+base/net/ws/WSServer.s: base/net/ws/WSServer.cc.s
+.PHONY : base/net/ws/WSServer.s
+
+# target to generate assembly for a file
+base/net/ws/WSServer.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/base/net/ws/WSServer.cc.s
+.PHONY : base/net/ws/WSServer.cc.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -565,6 +637,15 @@ help:
 	@echo "... NightlyTest"
 	@echo "... NightlyUpdate"
 	@echo "... main"
+	@echo "... base/Utility.o"
+	@echo "... base/Utility.i"
+	@echo "... base/Utility.s"
+	@echo "... base/net/ws/WSConnection.o"
+	@echo "... base/net/ws/WSConnection.i"
+	@echo "... base/net/ws/WSConnection.s"
+	@echo "... base/net/ws/WSServer.o"
+	@echo "... base/net/ws/WSServer.i"
+	@echo "... base/net/ws/WSServer.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

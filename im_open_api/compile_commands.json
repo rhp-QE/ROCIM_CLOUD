@@ -1,6 +1,24 @@
 [
 {
   "directory": "/root/project/ROCIM_CLOUD/im_open_api/build",
+  "command": "/usr/bin/g++-14 -DBOOST_CONTAINER_NO_LIB -DBOOST_CONTAINER_STATIC_LINK -DBOOST_CONTEXT_EXPORT=\"\" -DBOOST_CONTEXT_NO_LIB=\"\" -DBOOST_CONTEXT_STATIC_LINK=\"\" -DBOOST_DATE_TIME_NO_LIB -DBOOST_DATE_TIME_STATIC_LINK -DBOOST_JSON_NO_LIB=1 -DBOOST_JSON_STATIC_LINK=1 -I/root/project/ROCIM_CLOUD/im_open_api -I/root/ccdep/src/wcdb/src/build/export_headers -isystem /root/vcpkg/installed/x64-linux/include -g -g -O0 -std=gnu++23 -o CMakeFiles/main.dir/base/Utility.cc.o -c /root/project/ROCIM_CLOUD/im_open_api/base/Utility.cc",
+  "file": "/root/project/ROCIM_CLOUD/im_open_api/base/Utility.cc",
+  "output": "CMakeFiles/main.dir/base/Utility.cc.o"
+},
+{
+  "directory": "/root/project/ROCIM_CLOUD/im_open_api/build",
+  "command": "/usr/bin/g++-14 -DBOOST_CONTAINER_NO_LIB -DBOOST_CONTAINER_STATIC_LINK -DBOOST_CONTEXT_EXPORT=\"\" -DBOOST_CONTEXT_NO_LIB=\"\" -DBOOST_CONTEXT_STATIC_LINK=\"\" -DBOOST_DATE_TIME_NO_LIB -DBOOST_DATE_TIME_STATIC_LINK -DBOOST_JSON_NO_LIB=1 -DBOOST_JSON_STATIC_LINK=1 -I/root/project/ROCIM_CLOUD/im_open_api -I/root/ccdep/src/wcdb/src/build/export_headers -isystem /root/vcpkg/installed/x64-linux/include -g -g -O0 -std=gnu++23 -o CMakeFiles/main.dir/base/net/ws/WSConnection.cc.o -c /root/project/ROCIM_CLOUD/im_open_api/base/net/ws/WSConnection.cc",
+  "file": "/root/project/ROCIM_CLOUD/im_open_api/base/net/ws/WSConnection.cc",
+  "output": "CMakeFiles/main.dir/base/net/ws/WSConnection.cc.o"
+},
+{
+  "directory": "/root/project/ROCIM_CLOUD/im_open_api/build",
+  "command": "/usr/bin/g++-14 -DBOOST_CONTAINER_NO_LIB -DBOOST_CONTAINER_STATIC_LINK -DBOOST_CONTEXT_EXPORT=\"\" -DBOOST_CONTEXT_NO_LIB=\"\" -DBOOST_CONTEXT_STATIC_LINK=\"\" -DBOOST_DATE_TIME_NO_LIB -DBOOST_DATE_TIME_STATIC_LINK -DBOOST_JSON_NO_LIB=1 -DBOOST_JSON_STATIC_LINK=1 -I/root/project/ROCIM_CLOUD/im_open_api -I/root/ccdep/src/wcdb/src/build/export_headers -isystem /root/vcpkg/installed/x64-linux/include -g -g -O0 -std=gnu++23 -o CMakeFiles/main.dir/base/net/ws/WSServer.cc.o -c /root/project/ROCIM_CLOUD/im_open_api/base/net/ws/WSServer.cc",
+  "file": "/root/project/ROCIM_CLOUD/im_open_api/base/net/ws/WSServer.cc",
+  "output": "CMakeFiles/main.dir/base/net/ws/WSServer.cc.o"
+},
+{
+  "directory": "/root/project/ROCIM_CLOUD/im_open_api/build",
   "command": "/usr/bin/g++-14 -DBOOST_CONTAINER_NO_LIB -DBOOST_CONTAINER_STATIC_LINK -DBOOST_CONTEXT_EXPORT=\"\" -DBOOST_CONTEXT_NO_LIB=\"\" -DBOOST_CONTEXT_STATIC_LINK=\"\" -DBOOST_DATE_TIME_NO_LIB -DBOOST_DATE_TIME_STATIC_LINK -DBOOST_JSON_NO_LIB=1 -DBOOST_JSON_STATIC_LINK=1 -I/root/project/ROCIM_CLOUD/im_open_api -I/root/ccdep/src/wcdb/src/build/export_headers -isystem /root/vcpkg/installed/x64-linux/include -g -g -O0 -std=gnu++23 -o CMakeFiles/main.dir/main.cpp.o -c /root/project/ROCIM_CLOUD/im_open_api/main.cpp",
   "file": "/root/project/ROCIM_CLOUD/im_open_api/main.cpp",
   "output": "CMakeFiles/main.dir/main.cpp.o"

@@ -9,12 +9,15 @@
 #define ROC_BASE_NET_WSSERVER_H
 
 #include "base/noncopyable.h"
+#include <boost/beast.hpp>
 #include <boost/asio/ip/tcp.hpp>
 #include <boost/asio/awaitable.hpp>
 #include <boost/asio/io_context.hpp>
 #include <boost/asio/ip/address.hpp>
 #include <boost/beast/core/flat_buffer.hpp>
-#include <expected>
+#include <boost/beast/websocket/stream.hpp>
+
+
 #include <memory>
 #include <string>
 
@@ -63,11 +66,7 @@ class WSServer : public noncopyable,
     std::vector<std::shared_ptr<WSConnection>> connections_;
 
     // 持续读取数据
-    boost::asio::awaitable<void> do_read_continue(std::shared_ptr<WSConnection> conn);
-
-    // 等待连接
-    boost::asio::awaitable<std::shared_ptr<WSConnection>> wait_for_connection(boost::asio::ip::tcp::acceptor& acceptor);
-
+    boost::asio::awaitable<void> do_session_(boost::beast::websocket::stream<boost::beast::tcp_stream> stream);
 };
 
 } // namespace roc::base::net

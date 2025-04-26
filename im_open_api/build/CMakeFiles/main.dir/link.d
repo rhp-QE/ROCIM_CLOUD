@@ -2,6 +2,9 @@ main: \
   /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/Scrt1.o \
   /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crti.o \
   /usr/lib/gcc/x86_64-linux-gnu/14/crtbeginS.o \
+  CMakeFiles/main.dir/base/Utility.cc.o \
+  CMakeFiles/main.dir/base/net/ws/WSConnection.cc.o \
+  CMakeFiles/main.dir/base/net/ws/WSServer.cc.o \
   CMakeFiles/main.dir/main.cpp.o \
   /root/ccdep/src/wcdb/src/build/libWCDB.so \
   /root/vcpkg/installed/x64-linux/debug/lib/libboost_json.a \
@@ -153,6 +156,12 @@ main: \
 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crti.o:
 
 /usr/lib/gcc/x86_64-linux-gnu/14/crtbeginS.o:
+
+CMakeFiles/main.dir/base/Utility.cc.o:
+
+CMakeFiles/main.dir/base/net/ws/WSConnection.cc.o:
+
+CMakeFiles/main.dir/base/net/ws/WSServer.cc.o:
 
 CMakeFiles/main.dir/main.cpp.o:
 

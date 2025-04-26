@@ -19,7 +19,7 @@ include_directories(${CMAKE_SOURCE_DIR})
 # 使用更安全的源文件收集方式（推荐显式列出）
 file(GLOB_RECURSE SOURCES 
   "base/*.cpp"
-  "base/*.cpp"
+  "base/*.cc"
   "im_open_api/*.cc"
   "im_open_api/*.cpp"
   "im_message_api/*.cc"

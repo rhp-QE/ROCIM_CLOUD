@@ -21,14 +21,13 @@ namespace roc::base::net {
 class WSConnection : public roc::base::noncopyable,
                      public std::enable_shared_from_this<WSConnection> {
 
-    using stream_type =
-        boost::beast::websocket::stream<boost::asio::ip::tcp::socket>;
+    using stream_type = boost::beast::websocket::stream<boost::beast::tcp_stream>;
 
   public:
-    explicit WSConnection(boost::asio::io_context &io_context,
-                          stream_type stream);
+    explicit WSConnection(boost::asio::io_context &io_context, stream_type stream);
 
     boost::asio::awaitable<boost::beast::flat_buffer> read();
+
     boost::asio::awaitable<size_t> send(const char *data, size_t len);
 
   private:

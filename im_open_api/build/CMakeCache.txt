@@ -37,15 +37,14 @@ CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
 //Path to a program.
 CMAKE_AR:FILEPATH=/usr/bin/ar
 
-//Choose the type of build, options are: None Debug Release RelWithDebInfo
-// MinSizeRel ...
-CMAKE_BUILD_TYPE:STRING=
+//No help, variable specified on the command line.
+CMAKE_BUILD_TYPE:STRING=Debug
 
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
 
-//CXX compiler
-CMAKE_CXX_COMPILER:STRING=/usr/bin/g++-14
+//No help, variable specified on the command line.
+CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/g++-14
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -70,8 +69,8 @@ CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 //Flags used by the CXX compiler during RELWITHDEBINFO builds.
 CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
-//C compiler
-CMAKE_C_COMPILER:STRING=/usr/bin/gcc-14
+//No help, variable specified on the command line.
+CMAKE_C_COMPILER:FILEPATH=/usr/bin/gcc-14
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -113,6 +112,9 @@ CMAKE_EXE_LINKER_FLAGS_RELEASE:STRING=
 
 //Flags used by the linker during RELWITHDEBINFO builds.
 CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
+
+//No help, variable specified on the command line.
+CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE
 
 //Value Computed by CMake.
 CMAKE_FIND_PACKAGE_REDIRECTS_DIR:STATIC=/root/project/ROCIM_CLOUD/im_open_api/build/CMakeFiles/pkgRedirects
@@ -724,11 +726,11 @@ FIND_PACKAGE_MESSAGE_DETAILS_Boost:INTERNAL=[/root/vcpkg/installed/x64-linux/sha
 //Details about finding OpenSSL
 FIND_PACKAGE_MESSAGE_DETAILS_OpenSSL:INTERNAL=[/root/vcpkg/installed/x64-linux/debug/lib/libcrypto.a][/root/vcpkg/installed/x64-linux/include][ ][v3.5.0()]
 //Details about finding Protobuf
-FIND_PACKAGE_MESSAGE_DETAILS_Protobuf:INTERNAL=[/root/vcpkg/installed/x64-linux/tools/protobuf/protoc][/root/vcpkg/installed/x64-linux/lib/libprotobuf.a][/root/vcpkg/installed/x64-linux/include][v29.3.0()]
+FIND_PACKAGE_MESSAGE_DETAILS_Protobuf:INTERNAL=[/root/vcpkg/installed/x64-linux/tools/protobuf/protoc][optimized;/root/vcpkg/installed/x64-linux/lib/libprotobuf.a;debug;/root/vcpkg/installed/x64-linux/debug/lib/libprotobufd.a][/root/vcpkg/installed/x64-linux/include][v29.3.0()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //Details about finding ZLIB
-FIND_PACKAGE_MESSAGE_DETAILS_ZLIB:INTERNAL=[/root/vcpkg/installed/x64-linux/lib/libz.a][/root/vcpkg/installed/x64-linux/include][ ][v1.3.1()]
+FIND_PACKAGE_MESSAGE_DETAILS_ZLIB:INTERNAL=[optimized;/root/vcpkg/installed/x64-linux/lib/libz.a;debug;/root/vcpkg/installed/x64-linux/debug/lib/libz.a][/root/vcpkg/installed/x64-linux/include][ ][v1.3.1()]
 //Details about finding c-ares
 FIND_PACKAGE_MESSAGE_DETAILS_c-ares:INTERNAL=[/root/vcpkg/installed/x64-linux/share/c-ares/c-ares-config.cmake][v1.34.5()]
 //ADVANCED property for variable: MAKECOMMAND

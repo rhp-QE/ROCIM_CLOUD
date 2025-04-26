@@ -14,7 +14,7 @@ namespace roc::base::net {
 
 WSConnection::WSConnection(boost::asio::io_context &io_context, stream_type stream)
     : io_context_(io_context),
-      ws_stream_(stream) {}
+      ws_stream_(std::move(stream)) {}
 
 boost::asio::awaitable<boost::beast::flat_buffer> WSConnection::read() {
     using namespace boost;
@@ -24,6 +24,7 @@ boost::asio::awaitable<boost::beast::flat_buffer> WSConnection::read() {
 
     if (ec) {
         // 错误  / 连接关闭
+        int a = 100;
     }
 
     co_return buffer;
@@ -33,10 +34,13 @@ boost::asio::awaitable<size_t> WSConnection::send(const char *data, size_t len) 
     auto ex = co_await boost::asio::this_coro::executor;
     co_await boost::asio::post(boost::asio::bind_executor(io_context_, boost::asio::use_awaitable));
 
-    auto res = co_await ws_stream_.async_write(boost::asio::buffer(data, len), beast::net::as_tuple);
+    auto [ec, size] = co_await ws_stream_.async_write(boost::asio::buffer(data, len), boost::beast::net::as_tuple);
+
     co_await boost::asio::post(boost::asio::bind_executor(ex, boost::asio::use_awaitable));
 
-    co_return res;
+    co_return size;
 }
+
+
 
 } // namespace roc::base::net

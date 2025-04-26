@@ -72,10 +72,52 @@ include CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/codegen:
 .PHONY : CMakeFiles/main.dir/codegen
 
+CMakeFiles/main.dir/base/Utility.cc.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/base/Utility.cc.o: /root/project/ROCIM_CLOUD/im_open_api/base/Utility.cc
+CMakeFiles/main.dir/base/Utility.cc.o: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/project/ROCIM_CLOUD/im_open_api/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/main.dir/base/Utility.cc.o"
+	/usr/bin/g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/base/Utility.cc.o -MF CMakeFiles/main.dir/base/Utility.cc.o.d -o CMakeFiles/main.dir/base/Utility.cc.o -c /root/project/ROCIM_CLOUD/im_open_api/base/Utility.cc
+
+CMakeFiles/main.dir/base/Utility.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/base/Utility.cc.i"
+	/usr/bin/g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/project/ROCIM_CLOUD/im_open_api/base/Utility.cc > CMakeFiles/main.dir/base/Utility.cc.i
+
+CMakeFiles/main.dir/base/Utility.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/base/Utility.cc.s"
+	/usr/bin/g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/project/ROCIM_CLOUD/im_open_api/base/Utility.cc -o CMakeFiles/main.dir/base/Utility.cc.s
+
+CMakeFiles/main.dir/base/net/ws/WSConnection.cc.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/base/net/ws/WSConnection.cc.o: /root/project/ROCIM_CLOUD/im_open_api/base/net/ws/WSConnection.cc
+CMakeFiles/main.dir/base/net/ws/WSConnection.cc.o: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/project/ROCIM_CLOUD/im_open_api/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/main.dir/base/net/ws/WSConnection.cc.o"
+	/usr/bin/g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/base/net/ws/WSConnection.cc.o -MF CMakeFiles/main.dir/base/net/ws/WSConnection.cc.o.d -o CMakeFiles/main.dir/base/net/ws/WSConnection.cc.o -c /root/project/ROCIM_CLOUD/im_open_api/base/net/ws/WSConnection.cc
+
+CMakeFiles/main.dir/base/net/ws/WSConnection.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/base/net/ws/WSConnection.cc.i"
+	/usr/bin/g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/project/ROCIM_CLOUD/im_open_api/base/net/ws/WSConnection.cc > CMakeFiles/main.dir/base/net/ws/WSConnection.cc.i
+
+CMakeFiles/main.dir/base/net/ws/WSConnection.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/base/net/ws/WSConnection.cc.s"
+	/usr/bin/g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/project/ROCIM_CLOUD/im_open_api/base/net/ws/WSConnection.cc -o CMakeFiles/main.dir/base/net/ws/WSConnection.cc.s
+
+CMakeFiles/main.dir/base/net/ws/WSServer.cc.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/base/net/ws/WSServer.cc.o: /root/project/ROCIM_CLOUD/im_open_api/base/net/ws/WSServer.cc
+CMakeFiles/main.dir/base/net/ws/WSServer.cc.o: CMakeFiles/main.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/project/ROCIM_CLOUD/im_open_api/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/main.dir/base/net/ws/WSServer.cc.o"
+	/usr/bin/g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/base/net/ws/WSServer.cc.o -MF CMakeFiles/main.dir/base/net/ws/WSServer.cc.o.d -o CMakeFiles/main.dir/base/net/ws/WSServer.cc.o -c /root/project/ROCIM_CLOUD/im_open_api/base/net/ws/WSServer.cc
+
+CMakeFiles/main.dir/base/net/ws/WSServer.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/main.dir/base/net/ws/WSServer.cc.i"
+	/usr/bin/g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/project/ROCIM_CLOUD/im_open_api/base/net/ws/WSServer.cc > CMakeFiles/main.dir/base/net/ws/WSServer.cc.i
+
+CMakeFiles/main.dir/base/net/ws/WSServer.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/main.dir/base/net/ws/WSServer.cc.s"
+	/usr/bin/g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/project/ROCIM_CLOUD/im_open_api/base/net/ws/WSServer.cc -o CMakeFiles/main.dir/base/net/ws/WSServer.cc.s
+
 CMakeFiles/main.dir/main.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/main.cpp.o: /root/project/ROCIM_CLOUD/im_open_api/main.cpp
 CMakeFiles/main.dir/main.cpp.o: CMakeFiles/main.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/project/ROCIM_CLOUD/im_open_api/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/main.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/project/ROCIM_CLOUD/im_open_api/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/main.dir/main.cpp.o"
 	/usr/bin/g++-14 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/main.dir/main.cpp.o -MF CMakeFiles/main.dir/main.cpp.o.d -o CMakeFiles/main.dir/main.cpp.o -c /root/project/ROCIM_CLOUD/im_open_api/main.cpp
 
 CMakeFiles/main.dir/main.cpp.i: cmake_force
@@ -88,11 +130,17 @@ CMakeFiles/main.dir/main.cpp.s: cmake_force
 
 # Object files for target main
 main_OBJECTS = \
+"CMakeFiles/main.dir/base/Utility.cc.o" \
+"CMakeFiles/main.dir/base/net/ws/WSConnection.cc.o" \
+"CMakeFiles/main.dir/base/net/ws/WSServer.cc.o" \
 "CMakeFiles/main.dir/main.cpp.o"
 
 # External object files for target main
 main_EXTERNAL_OBJECTS =
 
+main: CMakeFiles/main.dir/base/Utility.cc.o
+main: CMakeFiles/main.dir/base/net/ws/WSConnection.cc.o
+main: CMakeFiles/main.dir/base/net/ws/WSServer.cc.o
 main: CMakeFiles/main.dir/main.cpp.o
 main: CMakeFiles/main.dir/build.make
 main: CMakeFiles/main.dir/compiler_depend.ts
@@ -209,7 +257,7 @@ main: /root/vcpkg/installed/x64-linux/debug/lib/libabsl_throw_delegate.a
 main: /root/vcpkg/installed/x64-linux/debug/lib/libabsl_raw_logging_internal.a
 main: /root/vcpkg/installed/x64-linux/debug/lib/libabsl_log_severity.a
 main: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/root/project/ROCIM_CLOUD/im_open_api/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/root/project/ROCIM_CLOUD/im_open_api/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
